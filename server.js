@@ -10,6 +10,10 @@ app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI);
 
+app.get("/", (req, res) => {
+    res.json("Welcome on Vinted Api ! 🎉");
+});
+
 //import des routes
 const signUpRoutes = require("./routes/signUp");
 const loginRoutes = require("./routes/login");
