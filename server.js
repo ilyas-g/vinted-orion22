@@ -4,7 +4,7 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 
-mongoose.connect(process.env.MONGODB_URI_PROD);
+mongoose.connect(process.env.MONGODB_URI);
 
 //import des routes
 const signUpRoutes = require("./routes/signUp");
