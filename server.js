@@ -4,7 +4,7 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost/vinted");
+mongoose.connect(process.env.MONGODB_URI_PROD);
 
 //import des routes
 const signUpRoutes = require("./routes/signUp");
